@@ -59,7 +59,8 @@ We gathered soccer statistics data using R, covering match statistics from the 2
 ### Expected Goals (xG) Model and the Law of Averages
 The Expected Goals (xG) model is a widely-used metric in soccer analytics that estimates the probability of a goal being scored based on the quality and location of shots taken. This model uses historical shot data from both teams to simulate match outcomes.
 
-![Picture1](https://github.com/user-attachments/assets/93b04b65-3d10-499a-93d1-e3ae77c092ac)
+![image](https://github.com/user-attachments/assets/3bec6b0f-be16-4aba-85aa-adbb1ffc18da)
+
 
 #### How it Works:
 - **xG Calculation:**  
