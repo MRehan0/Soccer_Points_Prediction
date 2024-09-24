@@ -56,6 +56,23 @@ We gathered soccer statistics data using R, covering match statistics from the 2
 
 ## Modeling Approach
 
+### Expected Goals (xG) Model and the Law of Averages
+The Expected Goals (xG) model is a widely-used metric in soccer analytics that estimates the probability of a goal being scored based on the quality and location of shots taken. This model uses historical shot data from both teams to simulate match outcomes.
+
+![Picture1](https://github.com/user-attachments/assets/93b04b65-3d10-499a-93d1-e3ae77c092ac)
+
+#### How it Works:
+- **xG Calculation:**  
+   For each team, xG values are calculated based on historical shot and goal data. These values are combined with shot data from both teams in a match to estimate the likelihood of goals.
+   
+- **Law of Averages:**  
+   The model employs the Law of Averages, which states that over a large number of trials (in this case, shots), the average outcome will converge toward the expected value. By running multiple simulations of matches based on xG and shot probabilities, we predict how teams would perform if expected goals were the only available metric.
+
+#### Key Highlights:
+- The Expected Goals model predicts match outcomes based purely on statistical probabilities, making it useful for estimating team performance in scenarios where detailed match stats are limited.
+- **Performance:**  
+   While the xG model provided interesting insights, it was less accurate in predicting final standings, with an RMSE of 12.05 and fewer correct position guesses. This reinforces the idea that xG alone, while useful, is not a comprehensive measure for predicting match outcomes.
+
 ### Linear Regression
 Linear regression is a statistical approach that models the relationship between independent variables (match statistics) and the dependent variable (points). In this project, we used match data to predict points for each team based on metrics like goals, assists, and defending performance.
 
@@ -74,20 +91,7 @@ XGBoost is a powerful gradient boosting algorithm that focuses on optimizing mod
 - **Performance:**  
    XGBoost achieved an RMSE of 9.25 and predicted points for 19 out of 20 teams within prediction intervals, demonstrating its robustness.
 
-### Expected Goals (xG) Model and the Law of Averages
-The Expected Goals (xG) model is a widely-used metric in soccer analytics that estimates the probability of a goal being scored based on the quality and location of shots taken. This model uses historical shot data from both teams to simulate match outcomes.
 
-#### How it Works:
-- **xG Calculation:**  
-   For each team, xG values are calculated based on historical shot and goal data. These values are combined with shot data from both teams in a match to estimate the likelihood of goals.
-   
-- **Law of Averages:**  
-   The model employs the Law of Averages, which states that over a large number of trials (in this case, shots), the average outcome will converge toward the expected value. By running multiple simulations of matches based on xG and shot probabilities, we predict how teams would perform if expected goals were the only available metric.
-
-#### Key Highlights:
-- The Expected Goals model predicts match outcomes based purely on statistical probabilities, making it useful for estimating team performance in scenarios where detailed match stats are limited.
-- **Performance:**  
-   While the xG model provided interesting insights, it was less accurate in predicting final standings, with an RMSE of 12.05 and fewer correct position guesses. This reinforces the idea that xG alone, while useful, is not a comprehensive measure for predicting match outcomes.
 
 #### Example:
 If Team A has an xG of 1.5 and Team B has an xG of 1.0, the model predicts that Team A is more likely to win, assuming no other factors come into play. Over many simulations, Team A would win more often than Team B, reflecting the higher probability of scoring based on xG values.
@@ -95,10 +99,19 @@ If Team A has an xG of 1.5 and Team B has an xG of 1.0, the model predicts that 
 ## Results
 
 **Model Highlights:**
-- **Linear Regression:** Positions guessed correctly: 6; Mean points difference: 7.4
-- **Random Forest:** Positions guessed correctly: 5; Mean points difference: 7.3
-- **XGBoost:** Positions guessed correctly: 5; Mean points difference: 6.9
-- **Expected Goals:** Positions guessed correctly: 2; Mean points difference: 12.05
+- **Expected Goals:
+-![Table using expected goals](https://github.com/user-attachments/assets/949c168a-2394-4bcc-bfe7-122a15ad5ec4)
+- ** Positions guessed correctly: 2; Mean points difference: 12.05
+- **Linear Regression:
+-![table using linear regression](https://github.com/user-attachments/assets/c9873b73-b568-4b28-8bfd-d25ccd42e8c3)
+- ** Positions guessed correctly: 6; Mean points difference: 7.4
+- **Random Forest:
+- ![Table using Random Forest](https://github.com/user-attachments/assets/9a7bde81-0128-4405-b57e-323213dd0129)
+- ** Positions guessed correctly: 5; Mean points difference: 7.3
+- **XGBoost:
+-![Table using xgboost](https://github.com/user-attachments/assets/ca32bcd9-eaff-4ecf-86ac-f6d109a07c6b)
+- ** Positions guessed correctly: 5; Mean points difference: 6.9
+
 
 ## Future Enhancements
 
