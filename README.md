@@ -99,18 +99,18 @@ If Team A has an xG of 1.5 and Team B has an xG of 1.0, the model predicts that 
 ## Results
 
 **Model Highlights:**
-- **Expected Goals:
+- **Expected Goals:**
 -![Table using expected goals](https://github.com/user-attachments/assets/949c168a-2394-4bcc-bfe7-122a15ad5ec4)
-- ** Positions guessed correctly: 2; Mean points difference: 12.05
-- **Linear Regression:
+- Positions guessed correctly: 2; Mean points difference: 12.05
+- **Linear Regression:**
 -![table using linear regression](https://github.com/user-attachments/assets/c9873b73-b568-4b28-8bfd-d25ccd42e8c3)
-- ** Positions guessed correctly: 6; Mean points difference: 7.4
-- **Random Forest:
+- Positions guessed correctly: 6; Mean points difference: 7.4
+- **Random Forest:**
 - ![Table using Random Forest](https://github.com/user-attachments/assets/9a7bde81-0128-4405-b57e-323213dd0129)
-- ** Positions guessed correctly: 5; Mean points difference: 7.3
-- **XGBoost:
+- Positions guessed correctly: 5; Mean points difference: 7.3
+- **XGBoost:**
 -![Table using xgboost](https://github.com/user-attachments/assets/ca32bcd9-eaff-4ecf-86ac-f6d109a07c6b)
-- ** Positions guessed correctly: 5; Mean points difference: 6.9
+- Positions guessed correctly: 5; Mean points difference: 6.9
 
 
 ## Future Enhancements
