@@ -26,7 +26,7 @@ This project aims to predict a soccer team's position in a league season using m
 
 ## Data Sources
 
-We gathered soccer statistics data using R, covering match statistics from the 2019, 2022, and 2023 seasons. The 2019 and 2022 data were used for model training, and the 2023 data was used for predictions. The dataset includes relevant match data such as goals, assists, tackles, saves, and expected goals (xG), categorized into attacking, defending, and goalkeeping metrics.
+I gathered soccer statistics data using R, covering match statistics from the 2019, 2022, and 2023 seasons. The 2019 and 2022 data were used for model training, and the 2023 data was used for predictions. The dataset includes relevant match data such as goals, assists, tackles, saves, and expected goals (xG), categorized into attacking, defending, and goalkeeping metrics.
 
 ### Variables Considered
 
